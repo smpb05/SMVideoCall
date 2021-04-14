@@ -10,5 +10,5 @@ s.swift_versions = ['5.0']
 s.ios.deployment_target = '11.0'
 s.source_files = 'SMVideoCall/**/*.{swift}'
 s.static_framework = true
-s.dependency 'WKWebViewRTC', '~> 0.3.0
+s.dependency 'WKWebViewRTC', '~> 0.3.0'
 end
