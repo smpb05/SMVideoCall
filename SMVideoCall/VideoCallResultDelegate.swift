@@ -5,4 +5,6 @@
 //  Created by smartex on 14.04.2021.
 //
 
-import Foundation
+public protocol VideoCallResultDelegate: AnyObject {
+    func videoCallResultAvailable(_ videoCallResult: Int)
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>BD7EF7E7-1DB5-407B-A1D0-B0AE8D872F83</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>BD7EF7E7-1DB5-407B-A1D0-B0AE8D872F83.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>SMVideoCall project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>SMVideoCall</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project SMVideoCall with scheme SMVideoCall</string>
+			<key>timeStartedRecording</key>
+			<real>640076251.73683095</real>
+			<key>timeStoppedRecording</key>
+			<real>640076253.05660903</real>
+			<key>title</key>
+			<string>Building project SMVideoCall with scheme SMVideoCall</string>
+			<key>uniqueIdentifier</key>
+			<string>BD7EF7E7-1DB5-407B-A1D0-B0AE8D872F83</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.4 (swiftlang-1205.0.26.4 clang-1205.0.19.54)"
+options: "f98c4f141ef1b524ba114631f49c2a92"
+build_time: [1618383794, 666240000]
+inputs:
+  "/Users/smartex/Desktop/SMVideoCall/SMVideoCall/VideoCallViewController.swift": !dirty [1618382476, 735625500]
+  "/Users/smartex/Desktop/SMVideoCall/SMVideoCall/VideoCallResultDelegate.swift": !dirty [1618382503, 674966862]

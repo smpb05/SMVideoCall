@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E74320382626C3B500BA79E0 /* SMVideoCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74320372626C3B500BA79E0 /* SMVideoCall.swift */; };
+		27013C0B527918A71518641C /* Pods_SMVideoCall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF8D06C0E5A955401C8D683E /* Pods_SMVideoCall.framework */; };
+		E743203F2626C5E300BA79E0 /* VideoCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E743203E2626C5E300BA79E0 /* VideoCallViewController.swift */; };
+		E74320412626C60B00BA79E0 /* VideoCallResultDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74320402626C60B00BA79E0 /* VideoCallResultDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +25,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1F363843DDBC0F6D69FEFF01 /* Pods-SMVideoCall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMVideoCall.release.xcconfig"; path = "Target Support Files/Pods-SMVideoCall/Pods-SMVideoCall.release.xcconfig"; sourceTree = "<group>"; };
+		479CB4F0498AE3C836B68681 /* Pods-SMVideoCall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMVideoCall.debug.xcconfig"; path = "Target Support Files/Pods-SMVideoCall/Pods-SMVideoCall.debug.xcconfig"; sourceTree = "<group>"; };
+		CF8D06C0E5A955401C8D683E /* Pods_SMVideoCall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMVideoCall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E74320342626C3B500BA79E0 /* libSMVideoCall.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSMVideoCall.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		E74320372626C3B500BA79E0 /* SMVideoCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMVideoCall.swift; sourceTree = "<group>"; };
+		E743203E2626C5E300BA79E0 /* VideoCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCallViewController.swift; sourceTree = "<group>"; };
+		E74320402626C60B00BA79E0 /* VideoCallResultDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCallResultDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,17 +38,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27013C0B527918A71518641C /* Pods_SMVideoCall.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		276473F7E3B6E95880614710 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF8D06C0E5A955401C8D683E /* Pods_SMVideoCall.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6D6964130F089D17AA1129DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				479CB4F0498AE3C836B68681 /* Pods-SMVideoCall.debug.xcconfig */,
+				1F363843DDBC0F6D69FEFF01 /* Pods-SMVideoCall.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E743202B2626C3B500BA79E0 = {
 			isa = PBXGroup;
 			children = (
 				E74320362626C3B500BA79E0 /* SMVideoCall */,
 				E74320352626C3B500BA79E0 /* Products */,
+				6D6964130F089D17AA1129DB /* Pods */,
+				276473F7E3B6E95880614710 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,7 +83,8 @@
 		E74320362626C3B500BA79E0 /* SMVideoCall */ = {
 			isa = PBXGroup;
 			children = (
-				E74320372626C3B500BA79E0 /* SMVideoCall.swift */,
+				E743203E2626C5E300BA79E0 /* VideoCallViewController.swift */,
+				E74320402626C60B00BA79E0 /* VideoCallResultDelegate.swift */,
 			);
 			path = SMVideoCall;
 			sourceTree = "<group>";
@@ -69,6 +96,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E743203B2626C3B500BA79E0 /* Build configuration list for PBXNativeTarget "SMVideoCall" */;
 			buildPhases = (
+				7926ACCCF3229EA261DF3408 /* [CP] Check Pods Manifest.lock */,
 				E74320302626C3B500BA79E0 /* Sources */,
 				E74320312626C3B500BA79E0 /* Frameworks */,
 				E74320322626C3B500BA79E0 /* CopyFiles */,
@@ -93,6 +121,7 @@
 				TargetAttributes = {
 					E74320332626C3B500BA79E0 = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -114,12 +143,38 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7926ACCCF3229EA261DF3408 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SMVideoCall-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E74320302626C3B500BA79E0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E74320382626C3B500BA79E0 /* SMVideoCall.swift in Sources */,
+				E743203F2626C5E300BA79E0 /* VideoCallViewController.swift in Sources */,
+				E74320412626C60B00BA79E0 /* VideoCallResultDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,7 +232,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -232,7 +287,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -244,12 +299,26 @@
 		};
 		E743203C2626C3B500BA79E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 479CB4F0498AE3C836B68681 /* Pods-SMVideoCall.debug.xcconfig */;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X5KC874YL9;
-				OTHER_LDFLAGS = "-ObjC";
+				EXCLUDED_ARCHS = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -257,10 +326,23 @@
 		};
 		E743203D2626C3B500BA79E0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F363843DDBC0F6D69FEFF01 /* Pods-SMVideoCall.release.xcconfig */;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X5KC874YL9;
-				OTHER_LDFLAGS = "-ObjC";
+				EXCLUDED_ARCHS = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;

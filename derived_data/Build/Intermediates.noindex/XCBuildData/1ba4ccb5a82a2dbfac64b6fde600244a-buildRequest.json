@@ -1,0 +1,67 @@
+{
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "da08a8ac0d16c8c373ccbf4a7c0e53886c4c86527a417d7523a8f67391b45c9f"
+    }
+  ],
+  "continueBuildingAfterErrors" : false,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "arm64e",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : true,
+      "platform" : "iphoneos",
+      "sdk" : "iphoneos14.5",
+      "sdkVariant" : "iphoneos",
+      "supportedArchitectures" : [
+        "armv4t",
+        "armv5",
+        "armv6",
+        "armv7",
+        "armv7f",
+        "armv7s",
+        "armv7k",
+        "arm64",
+        "arm64e"
+      ],
+      "targetArchitecture" : "arm64e"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/smartex/Desktop/SMVideoCall/derived_data/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/smartex/Desktop/SMVideoCall/derived_data/Build/Products",
+      "derivedDataPath" : "/Users/smartex/Desktop/SMVideoCall/derived_data",
+      "indexDataStoreFolderPath" : "/Users/smartex/Desktop/SMVideoCall/derived_data/Index/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/smartex/Desktop/SMVideoCall/derived_data/Index/PrecompiledHeaders",
+      "pchPath" : "/Users/smartex/Desktop/SMVideoCall/derived_data/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "commandLine" : {
+        "table" : {
+          "ARCHS" : "arm64",
+          "BUILD_LIBRARY_FOR_DISTRIBUTION" : "YES",
+          "SDKROOT" : "iphoneos14.5"
+        }
+      },
+      "synthesized" : {
+        "table" : {
+          "ACTION" : "build",
+          "COLOR_DIAGNOSTICS" : "YES",
+          "diagnostic_message_length" : "80",
+          "ENABLE_PREVIEWS" : "NO"
+        }
+      }
+    }
+  },
+  "schemeCommand" : "launch",
+  "shouldCollectMetrics" : false,
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}

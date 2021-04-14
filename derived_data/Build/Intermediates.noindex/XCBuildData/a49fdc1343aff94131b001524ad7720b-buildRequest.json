@@ -1,0 +1,63 @@
+{
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "da08a8ac0d16c8c373ccbf4a7c0e53886c4c86527a417d7523a8f67391b45c9f"
+    }
+  ],
+  "continueBuildingAfterErrors" : false,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "x86_64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : true,
+      "platform" : "iphonesimulator",
+      "sdk" : "iphonesimulator14.5",
+      "sdkVariant" : "iphonesimulator",
+      "supportedArchitectures" : [
+        "i386",
+        "x86_64"
+      ],
+      "targetArchitecture" : "x86_64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/smartex/Desktop/SMVideoCall/derived_data/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/smartex/Desktop/SMVideoCall/derived_data/Build/Products",
+      "derivedDataPath" : "/Users/smartex/Desktop/SMVideoCall/derived_data",
+      "indexDataStoreFolderPath" : "/Users/smartex/Desktop/SMVideoCall/derived_data/Index/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/smartex/Desktop/SMVideoCall/derived_data/Index/PrecompiledHeaders",
+      "pchPath" : "/Users/smartex/Desktop/SMVideoCall/derived_data/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "commandLine" : {
+        "table" : {
+          "ARCHS" : "x86_64",
+          "BUILD_LIBRARY_FOR_DISTRIBUTION" : "YES",
+          "SDKROOT" : "iphonesimulator14.5"
+        }
+      },
+      "synthesized" : {
+        "table" : {
+          "ACTION" : "build",
+          "BUILD_ACTIVE_RESOURCES_ONLY" : "YES",
+          "COLOR_DIAGNOSTICS" : "YES",
+          "diagnostic_message_length" : "80",
+          "ENABLE_PREVIEWS" : "NO",
+          "TARGET_DEVICE_IDENTIFIER" : "dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder",
+          "TARGET_DEVICE_PLATFORM_NAME" : "iphonesimulator"
+        }
+      }
+    }
+  },
+  "schemeCommand" : "launch",
+  "shouldCollectMetrics" : false,
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}
