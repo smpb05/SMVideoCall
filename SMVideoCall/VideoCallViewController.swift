@@ -8,6 +8,7 @@
 import UIKit
 import WebKit
 import WKWebViewRTC
+import AVFoundation
 
 public class VideoCallViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHandler{
     
@@ -16,11 +17,18 @@ public class VideoCallViewController: UIViewController, WKNavigationDelegate, WK
     public weak var delegate: VideoCallResultDelegate?
     
     var webView: WKWebView!
+    var headphonesConnected: Bool = false
     
     public override func loadView() {
+        if #available(iOS 14.3, *){}
+        else{
+            setupNotifications()
+        }
+        
         let contentController = WKUserContentController()
         contentController.add(self, name: "endCallWV")
         contentController.add(self, name: "snapScreen")
+        contentController.add(self, name: "switchToSpeaker")
         
         let webconfig = WKWebViewConfiguration()
         webconfig.allowsInlineMediaPlayback = true
@@ -30,13 +38,63 @@ public class VideoCallViewController: UIViewController, WKNavigationDelegate, WK
         view = webView
     }
     
+    func setupNotifications() {
+        // Get the default notification center instance.
+        let nc = NotificationCenter.default
+        nc.addObserver(self,
+                       selector: #selector(handleRouteChange),
+                       name: AVAudioSession.routeChangeNotification,
+                       object: nil)
+    }
+    
+    @objc func handleRouteChange(notification: Notification) {
+        guard let userInfo = notification.userInfo,
+               let reasonValue = userInfo[AVAudioSessionRouteChangeReasonKey] as? UInt,
+               let reason = AVAudioSession.RouteChangeReason(rawValue: reasonValue) else {
+                   return
+           }
+           
+           // Switch over the route change reason.
+           switch reason {
+
+           case .newDeviceAvailable: // New device found.
+               let session = AVAudioSession.sharedInstance()
+               headphonesConnected = hasHeadphones(in: session.currentRoute)
+           
+           case .oldDeviceUnavailable: // Old device removed.
+               if let previousRoute =
+                   userInfo[AVAudioSessionRouteChangePreviousRouteKey] as? AVAudioSessionRouteDescription {
+                   headphonesConnected = hasHeadphones(in: previousRoute)
+                   switchToSpeaker()
+               }
+           
+           default: ()
+           }
+    }
+    
+    func hasHeadphones(in routeDescription: AVAudioSessionRouteDescription) -> Bool {
+        // Filter the outputs to only those with a port type of headphones.
+        return !routeDescription.outputs.filter({$0.portType == .headphones}).isEmpty
+    }
+    
+    
+    func switchToSpeaker(){
+        do{
+           let session = AVAudioSession.sharedInstance()
+           try session.overrideOutputAudioPort(AVAudioSession.PortOverride.speaker)
+        }catch{
+            print("SMVideoCall: \(error)")
+         }
+    }
+    
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
         if #available(iOS 14.3, *){}
         else{
             WKWebViewRTC(wkwebview: webView, contentController: webView.configuration.userContentController)
         }
-        let loadUrl = baseUrl!+"&sdk=ios&version=0.2.1"
+        let loadUrl = baseUrl!+"&sdk=ios&version=0.2.2"
         webView.load(URLRequest(url: URL(string: loadUrl)!))
     }
     
@@ -53,6 +111,16 @@ public class VideoCallViewController: UIViewController, WKNavigationDelegate, WK
         
         if message.name == "snapScreen" {
             takeScreenShot()
+        }
+        
+        if message.name == "switchToSpeaker"{
+            if #available(iOS 14.3, *){}
+            else{
+                if !headphonesConnected {
+                    switchToSpeaker()
+                }
+            }
+            
         }
     }
     
