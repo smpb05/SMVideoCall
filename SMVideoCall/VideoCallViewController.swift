@@ -32,8 +32,11 @@ public class VideoCallViewController: UIViewController, WKNavigationDelegate, WK
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        WKWebViewRTC(wkwebview: webView, contentController: webView.configuration.userContentController)
-        let loadUrl = baseUrl!+"&sdk=ios&version=0.1.1"
+        if #available(iOS 14.3, *){}
+        else{
+            WKWebViewRTC(wkwebview: webView, contentController: webView.configuration.userContentController)
+        }
+        let loadUrl = baseUrl!+"&sdk=ios&version=0.2.1"
         webView.load(URLRequest(url: URL(string: loadUrl)!))
     }
     
